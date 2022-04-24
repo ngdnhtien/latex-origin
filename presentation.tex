@@ -1,0 +1,108 @@
+\documentclass{beamer}
+\usepackage[utf8]{vietnam}
+\usepackage{physics}
+\usepackage{amsthm}
+\usepackage{braket}
+\newtheorem{remark}{Remark}
+\newcommand{\dcp}{\delta_{CP}}
+\renewcommand\bra[1]{{\langle{#1}|}}
+\makeatletter
+\renewcommand\ket[1]{%
+  \@ifnextchar\bra{\k@t{#1}\!}{\k@t{#1}}%
+}
+\newcommand\k@t[1]{{|{#1}\rangle}}
+\DeclareMathAlphabet\mathbfcal{OMS}{cmsy}{b}{n}
+\makeatother
+\usetheme{Pittsburgh}
+\usecolortheme{default}
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Chương trình nghị/hoạt sự}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+%Information to be included in the title page:
+\title[HPC] %optional
+{SINH HOẠT THƯỜNG KỲ\\
+Tuần 8 (7--14/4)}
+
+\author[] % (optional, for multiple authors)
+{Nguyễn Đình Tiến}
+
+\institute[] % (optional)
+{
+Trưởng Ban Chuyên môn\\
+Câu lạc bộ Vật lý (HPC)
+}
+
+\date{}
+
+
+\begin{document}
+
+\frame{\titlepage}
+\tableofcontents
+\section{Không gian làm việc online}
+\begin{frame}
+    \frametitle{Tạm biệt Slack. Xin chào Discord}
+    Sau một thời gian thử nghiệm nội bộ Ban Chuyên môn với kế hoạch sử dụng Slack để làm việc, mình nhận thấy Slack có một vài nhược điểm
+            \begin{itemize}
+                \item Không cho phép họp trực tuyến từ 02 người dùng trở lên (phiên bản \textit{pagoda});
+                \item Không cho phép tạo kênh liên lạc riêng với external agent\footnote{người dùng bên ngoài tổ chức};
+                \item Giao diện chưa thân thiện, cần thời gian để làm quen.
+            \end{itemize}
+            Do vậy, chúng ta sẽ chuyển đổi toàn bộ hoạt động đang diễn ra trên Slack sang máy chủ Discord \textit{HUS Physics Club}. 
+\end{frame}
+\begin{frame}
+    \frametitle{Tạm biệt Slack. Xin chào Discord}
+    \begin{columns}
+        \begin{column}{0.6\textwidth}
+            Việc chuyển đổi từ Messenger sang Discord có những ưu điểm bao gồm:
+            \begin{itemize}
+                \item Tăng độ trong suốt (transparency) của toàn bộ CLB;
+                \item Tăng hiệu quả làm việc thông qua các kênh liên lạc đa kênh;
+                \item Hỗ trợ sắp xếp và lưu trữ dữ liệu, phục vụ truy xuất tốt hơn;
+                \item Có khả năng làm việc với external agent trong các trường hợp đặc biệt, ví dụ: Cách mạng $A^{+}$.
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.4\textwidth}
+            \begin{figure}
+                \centering 
+                \includegraphics[scale=0.4]{discord.png}
+                \caption{Quét mã QR trên để gia nhập máy chủ HUS Physics Club trên Discord.}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+\section{Cập nhật tiến độ}
+\begin{frame}
+    \frametitle{Cập nhật tiến độ (7--14/4)}
+    Các dự án đã giao và đang thực hiện bao gồm
+    \begin{enumerate}
+        \item Workshop "\textit{Vật lý trong cuộc sống}"\\ Diễn giả khách mời: Phúc Đạt;
+        \item Dự án \textit{Bóng thám không}\\
+        Leader: Nam Sơn (Ban Chuyên môn);
+        \item Kế hoạch dã ngoại và quay phim ngắn\\
+        Leader: Thuỳ Linh (Ban Chuyên môn);
+        \item HPCTalk lần 4, "Neutron trong trường hấp dẫn của Trái Đất"\\
+        Diễn giả: Thế Nam (Ban Chuyên môn).
+    \end{enumerate}
+\end{frame}
+\section{Kết luận \& Kế hoạch tuần tới}
+\begin{frame}
+    \frametitle{Kết luận \& Kế hoạch Tuần 9}
+
+    
+
+\end{frame}
+
+\section{Lab tour Khoa Vật lý}
+\begin{frame}
+    \frametitle{Lab tour Khoa Vật lý}
+
+    
+
+\end{frame}
+\end{document}

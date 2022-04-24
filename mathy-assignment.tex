@@ -1,0 +1,182 @@
+\documentclass[12pt]{paper}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\renewcommand{\rmdefault}{ptm}
+\usepackage{helvet}
+\usepackage{mtpro2}
+\usepackage{amsfonts, amsmath, amsthm, amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage[margin=1in]{geometry}
+\numberwithin{equation}{section}
+\newtheorem{question}{Question}
+\theoremstyle{definition}
+\newtheorem*{answer}{Answer}
+\renewcommand\thesection{\Roman{section}}
+\numberwithin{equation}{section}
+% \usepackage{titlesec}
+% \titleformat{\section}{\LARGE\bfseries}{Chapter \thesection.}{1em}{}
+
+% % % % % % % % % %
+\title{PHY2004 / NUCLEAR PHYSICS\\
+Problems and Solutions (Spring 2022)}
+\author{Tien D. Nguyen$^\dagger$\\
+Faculty of Physics, Hanoi University of Science}
+\date{\today}
+\begin{document}
+\maketitle
+\vfill
+$^\dagger$\textit{nguyendinhtien\_t65@hus.edu.vn}
+\newpage
+
+\section{ATOMIC NUCLEUS}
+\begin{question}
+    Determine the radius of a neutron star whose mass is equal to that of the Sun $M_\odot$. Given that neutron has mass of $m_n=1.6749\times 10^{-27}$ kg, radius of $r_n=1.2\times 10^{-15}$ m, and the mass of the Sun is $M_\odot=1.988\times 10^{30}kg$. We assume that the matter density of this neutron star is equal to that of a neutron particle.
+\end{question}
+\begin{answer}
+    The mass of the neutron $M_n$, which equal to $M_\odot$, is given by
+    \begin{align} 
+        M_n = V_n\rho = 4/3\rho\pi R_n^3,
+    \end{align}
+    where $\rho$ is the matter density of the star itself. On the other hand, $\rho = m_n/(4/3\pi r_n^3)$ from the assumption. Thus, 
+    \begin{align}
+        \dfrac{R_n}{r_n} = \left(\dfrac{M_\odot}{m_n}\right)^{1/3}\Rightarrow R_n = r_n\left(\dfrac{M_\odot}{m_n}\right)^{1/3}\approx 12.7\,\text{km}.
+    \end{align}
+    This number is in great agreement with current data obtained, which is about 10 kilometres and a mass of about 1.4 solar masses.
+\end{answer}
+
+\begin{question}
+    Calculate the energy required to release the weakest neutron (proton) link in the \ce{^{40}Ca} nuclei. Given the mass of the nucleus,
+    \begin{align}
+        &M(\ce{^{40}Ca}) = 39.962589 u\qquad m_n = 1.008665 u\\
+        &M(\ce{^{39}Ca}) = 38.970691 u\qquad m_p = 1.007825 u\\
+        &M(\ce{^{39}K}) = 38.963710 u
+    \end{align}
+\end{question}
+\begin{answer}
+    Let us consider the scenario in which a proton is released from the $\ce{^40}Ca$ nuclei. Proton loss means change in chemical property, thus in this case the resulting nuclei is $\ce{^39}K$.
+    \begin{align} 
+        \ce{^40}Ca \rightarrow \ce{^39}K + p.
+    \end{align}
+    The mass of $\ce{^40}Ca$ nuclei including the mass of $\ce{^39}K$ nuclei and proton, plus the binding energy $B$ of the weakest proton link, i.e.,
+    \begin{align} 
+        M(\ce{^40}Ca) &= M(\ce{^39}K)+ m_p + \dfrac{B_p}{c^2} \\
+        B_p &= \left[M(\ce{^40}Ca)-M(\ce{^39}K)-m_p\right]c^2 \\
+        B_p & = \left[39.9626-38.9637-1.0078\right]\times 931.49\,\dfrac{\text{MeV}}{c^2}\times c^2 \\
+        B_p & \approx 8.3\,\text{MeV}
+    \end{align}
+    Similarly, one can calculate the binding energy of the weakest neutron link. Note that in this case $\ce{^40}Ca \rightarrow \ce{^39}Ca + n$, and thus the binding energy $B_n$ is
+    \begin{align}
+        B_p &\approx \left[39.9626-38.9706-1.0086\right]\times 931.49\,\dfrac{\text{MeV}}{c^2}\times c^2 \\
+        &\approx 15.45\,\text{MeV}
+    \end{align}
+\end{answer}
+
+\begin{question}
+    Using the uncertainty principle to estimate the minimum energy of an electron captured inside a nuclei of size 10 fm.
+\end{question}
+\begin{answer}
+    The uncertainty principle of Heisenberg states that, mathematically,
+    \begin{align} 
+        \Delta x\Delta p > \hbar
+    \end{align}
+    This means that an electron captured inside a spherical nuclei of size $10$ fm would have a momentum at least $\hbar/10^{-15}$, or a minimum velocity of $\hbar/(m_e\times10^{-15})$. The energy of this electron is the sum of its potential energy and kinetic energy, meaning that 
+    \begin{align}
+        E = -\dfrac{ke}{r} + \dfrac{1}{2}m_e\left(\dfrac{\hbar}{m_e10^{-15}}\right)^2,
+    \end{align}
+    which is quite big, I mean, look that the power of 30.
+\end{answer}
+\begin{question}
+    Estimate the potential energy of an electron inside the $\ce{^197_79}Au$ nuclei. Assume that the nuclei, radius $R=r_0 A^{1/3}$, is spherical and has charge uniformly distributed. $r_0$ here is 1.2 fm.
+\end{question}
+\begin{answer}
+    One can verify readily, using Gauss law, that the electric field inside the nuclei is 
+    \begin{align} 
+        E_{in} = k\dfrac{Ze}{R^3}r\qquad(\text{for } r<R)
+    \end{align}
+    Let the potential at $\infty$ be 0, then the potential at some point $r$ is 
+    \begin{align} 
+        V(r) &= -\int_{\infty}^r\mathbf{E}\cdot\hat{\mathbf{r} }\\
+        &=- \dfrac{kZe}{2R}\left(3-\dfrac{r^2}{R^2}\right)
+    \end{align}
+    where $Z=79$, $R=r_0A^{1/3}$, and $k=1/4\pi\epsilon_0$.
+\end{answer}
+\newpage
+\section{RADIOACTIVE DECAY}
+\begin{question}
+    How many mm$^3$ Helium was released as a result of 1g Radium decay in 1 year? Assume that Helium is in ideal condition (at temperature 273 K and atmospheric pressure).
+\end{question}
+\begin{answer}
+    Radium $\ce{^226_88}Ra$ decays essentially by alpha particles $\ce{^4_2}He$ to an inert gas $\ce{^224_88}Rn$,
+    \begin{align}
+        \ce{^226_88}Ra \rightarrow \ce{^224_88}Rn + \ce{^4_2}He
+    \end{align}
+    One can see that each Helium particle is generated by each decay process, thus we can calculate the number of $\ce{^226}Ra$ decay to infer the number of $\ce{^4}He$ produced. After 1 year,
+    \begin{align} 
+        V_{Ra} &= V_0\left[1-\exp\left(-\ln2\dfrac{t}{\tau}\right)\right] \\
+        &= \dfrac{1}{226}\times 22.4\left[1-\exp\left(-\ln2\dfrac{1}{1600}\right)\right]
+    \end{align}
+    Note that $1<<1600$, thus $e^x\approx 1+x$ in this case is a good approximation,
+    \begin{align} 
+        V_{Ra} = \dfrac{1}{226}\times 22.4\times\ln2\dfrac{1}{1600}\times 10^6\approx 40\,\text{mm}^3
+    \end{align}
+\end{answer}
+\begin{question}
+    In a sample contains 1 litre of $CO_2$ at ideal condition, one observed 5 decay processes
+    \begin{align} 
+        \ce{^14_6}C \rightarrow \ce{^14_7}N + e^- + \bar{\nu}_e
+    \end{align}
+    per minute. Determine the ratio of $\ce{^14_6}C/\ce{^12_6}C$ in the sample, knowing that that average lifetime of $\ce{^14_6}C$ nuclei is 8267 years. $CO_2$ is made up from carbon resulting from the sample, with the initial ratio of $\ce{^14_6}C/\ce{^12_6}C$ at $t=0$ is $R_0=1.3\times 10^{-12}$. Estimate the age of the sample.
+\end{question}
+\begin{answer}
+    In nature, the number of $\ce{^12_6}C$ atoms is far more abundant than its isotope $\ce{^14_6}C$. Thus, in this sample, it is reasonable to assume that the total number of atoms is represented by $\ce{^12_6}C$ only, 
+    \begin{align} 
+        n_{12}+n_{14} \approx n_{12}=\dfrac{V}{22.4}\times N_A \approx 2.6875\times 10^{22}.
+    \end{align}
+    Now, we only have to find $\ce{^14_6}C$. They are small, but identifiable, since we can observe the beta decay and nitrogen production. The radioacitvity of $\ce{^14_6}C$ is $I(t)=dn_{14}(t)/dt=\lambda n_{14}(t)$. To this day, we observe 5 decay per minute, meaning that 
+    \begin{align} 
+        \dfrac{n_{14}}{\tau} = \dfrac{5}{\left(\dfrac{1}{60}\times \dfrac{1}{24}\times \dfrac{1}{365}\right)}\Longrightarrow n_{14} \approx 2.173\times 10^{10}
+    \end{align}
+    Thus the desirable ratio is found, $\mathcal{R}=n_{14}/n_{12}\approx 8.086\times 10^{-13}$. Note that both share the same exponential mechanism of decay, thus the ratio is given by
+    \begin{align}
+        \mathcal{R} = \mathcal{R}_0\exp\left(-\dfrac{t}{\tau}\right)\Longrightarrow t = \tau\ln\dfrac{\mathcal{R}_0}{\mathcal{R}} \approx 3926\,\text{years}
+    \end{align}
+\end{answer}
+\begin{question}
+    A gold sample being irradiated by neutron beam (of stable intensity), such that $10^{10}$ neutron particles are absorbed in every second accordingly to the process 
+    \begin{align} 
+        \ce{^197_79}Au + n \rightarrow \ce{^198_79}Au + \gamma 
+    \end{align}
+    The $\ce{^198_79}Au$ nuclei continues to $\beta^-$ decay into $\ce{^198_80}Hg$ with an average lifetime of 3.89 days. After 6 days of irradiation, how many $\ce{^198_79}Au$ atoms and $\ce{^198_80}Hg$ will be in the sample, provided that $\ce{^198_80}Hg$ is unaffected by the neutron beam. What is the largest amount of $\ce{^198_79}Au$ we can obtain?
+\end{question}
+\begin{answer}
+    We have 1 known equation,
+    \begin{align} 
+        \ce{^197_79}Au + n \rightarrow \ce{^198_79}Au + \gamma.
+    \end{align}
+    The other being that 
+    \begin{align} 
+        \ce{^198_79}Au \rightarrow \ce{^198_80}Hg + e^- + \bar{\nu}_e
+    \end{align}
+    The number of $\ce{^198_79}Au$ we can obtained is the remainder of that created by neutron-beam collisions then decays to $\ce{^198_80}Hg$. This can be sum up in a differential equation,
+    \begin{align} 
+        \dfrac{dN(\ce{^198_79}Au)}{dt} = P - \lambda N(\ce{^198_79}Au)
+    \end{align}
+    The solution of this differential equation is 
+    \begin{align} 
+        N(\ce{^198_79}Au) = \dfrac{P}{\lambda}\left[1 - \exp\left(-\lambda t\right)\right].
+    \end{align}
+\end{answer}
+\begin{question}
+    Natural uranium inside Earth's crust includes $\ce{^235}U$ and $\ce{^238}U$ isotopes with the radio of their atoms being that 
+    \begin{align} 
+        N(\ce{^235}U)/N(\ce{^238}U) = 7.3\times 10^{-3}
+    \end{align}
+    Let us assume that when created, this ratio is 1. Estimate the age of the Earth, knowing that $\tau_{235} = 1.03\times 10^9$ years and $\tau_{238}=6.49\times 10^9$ years.
+\end{question}
+\begin{answer}
+    Estimation of Earth's age according to the data,
+    \begin{align} 
+        t = \ln(7.3\times 10^{-3})\left[\dfrac{\tau_{235}\tau_{238}}{\tau_{235}-\tau_{238}}\right]\approx 6.023\times 10^9\,\text{years}.
+    \end{align}
+\end{answer}
+\end{document}
