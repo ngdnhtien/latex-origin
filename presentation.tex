@@ -1,9 +1,21 @@
+% LAST UPDATED 24 JUNE 2022
+
 \documentclass{beamer}
+\usetheme{Pittsburgh}
+\usecolortheme{default}
+
+% PACKAGES USED
 \usepackage[utf8]{vietnam}
 \usepackage{physics}
 \usepackage{amsthm}
 \usepackage{braket}
+
+% MACROS
+
+%% ENVIROMENTS
 \newtheorem{remark}{Remark}
+
+%% COMMANDS
 \newcommand{\dcp}{\delta_{CP}}
 \renewcommand\bra[1]{{\langle{#1}|}}
 \makeatletter
@@ -13,95 +25,69 @@
 \newcommand\k@t[1]{{|{#1}\rangle}}
 \DeclareMathAlphabet\mathbfcal{OMS}{cmsy}{b}{n}
 \makeatother
-\usetheme{Pittsburgh}
-\usecolortheme{default}
+
+% TOC
 \AtBeginSection[]
 {
   \begin{frame}
-    \frametitle{Chương trình nghị/hoạt sự}
+    \frametitle{Table of Contents}
     \tableofcontents[currentsection]
   \end{frame}
 }
 
 %Information to be included in the title page:
-\title[HPC] %optional
-{SINH HOẠT THƯỜNG KỲ\\
-Tuần 8 (7--14/4)}
-
+\title[ACRONYM] %optional
+{Your Title Here\\
+Subtitle Here}
 \author[] % (optional, for multiple authors)
-{Nguyễn Đình Tiến}
-
+{Dinh-Tien Nguyen}
 \institute[] % (optional)
 {
-Trưởng Ban Chuyên môn\\
-Câu lạc bộ Vật lý (HPC)
+Faculty of Physics\\
+VNU University of Science
 }
-
 \date{}
 
-
 \begin{document}
-
 \frame{\titlepage}
 \tableofcontents
-\section{Không gian làm việc online}
+
+\section{Section 1 Heading}
 \begin{frame}
-    \frametitle{Tạm biệt Slack. Xin chào Discord}
-    Sau một thời gian thử nghiệm nội bộ Ban Chuyên môn với kế hoạch sử dụng Slack để làm việc, mình nhận thấy Slack có một vài nhược điểm
+    \frametitle{Title Frame 1}
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             \begin{itemize}
-                \item Không cho phép họp trực tuyến từ 02 người dùng trở lên (phiên bản \textit{pagoda});
-                \item Không cho phép tạo kênh liên lạc riêng với external agent\footnote{người dùng bên ngoài tổ chức};
-                \item Giao diện chưa thân thiện, cần thời gian để làm quen.
+                \item Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur;
+                \item Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum;
+                \item Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
             \end{itemize}
-            Do vậy, chúng ta sẽ chuyển đổi toàn bộ hoạt động đang diễn ra trên Slack sang máy chủ Discord \textit{HUS Physics Club}. 
+    Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
 \end{frame}
 \begin{frame}
-    \frametitle{Tạm biệt Slack. Xin chào Discord}
+    \frametitle{Title Frame 2 (2 column)}
     \begin{columns}
         \begin{column}{0.6\textwidth}
-            Việc chuyển đổi từ Messenger sang Discord có những ưu điểm bao gồm:
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
             \begin{itemize}
-                \item Tăng độ trong suốt (transparency) của toàn bộ CLB;
-                \item Tăng hiệu quả làm việc thông qua các kênh liên lạc đa kênh;
-                \item Hỗ trợ sắp xếp và lưu trữ dữ liệu, phục vụ truy xuất tốt hơn;
-                \item Có khả năng làm việc với external agent trong các trường hợp đặc biệt, ví dụ: Cách mạng $A^{+}$.
+                \item sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt;
+                \item Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit;
+                \item Sed ut perspiciatis unde omnis iste natus error sit voluptatem;
             \end{itemize}
         \end{column}
         \begin{column}{0.4\textwidth}
             \begin{figure}
                 \centering 
-                \includegraphics[scale=0.4]{discord.png}
-                \caption{Quét mã QR trên để gia nhập máy chủ HUS Physics Club trên Discord.}
+                \includegraphics[scale=0.1]{qr.png}
+                \caption{Your QR Code here.}
             \end{figure}
         \end{column}
     \end{columns}
 \end{frame}
-\section{Cập nhật tiến độ}
+
+\section{Section 2 Heading}
 \begin{frame}
-    \frametitle{Cập nhật tiến độ (7--14/4)}
-    Các dự án đã giao và đang thực hiện bao gồm
-    \begin{enumerate}
-        \item Workshop "\textit{Vật lý trong cuộc sống}"\\ Diễn giả khách mời: Phúc Đạt;
-        \item Dự án \textit{Bóng thám không}\\
-        Leader: Nam Sơn (Ban Chuyên môn);
-        \item Kế hoạch dã ngoại và quay phim ngắn\\
-        Leader: Thuỳ Linh (Ban Chuyên môn);
-        \item HPCTalk lần 4, "Neutron trong trường hấp dẫn của Trái Đất"\\
-        Diễn giả: Thế Nam (Ban Chuyên môn).
-    \end{enumerate}
-\end{frame}
-\section{Kết luận \& Kế hoạch tuần tới}
-\begin{frame}
-    \frametitle{Kết luận \& Kế hoạch Tuần 9}
-
-    
-
-\end{frame}
-
-\section{Lab tour Khoa Vật lý}
-\begin{frame}
-    \frametitle{Lab tour Khoa Vật lý}
-
+    \frametitle{Title Frame 3}
+    Placeholder.
     
 
 \end{frame}
